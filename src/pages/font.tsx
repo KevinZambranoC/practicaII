@@ -1,29 +1,29 @@
-// pages/_document.tsx
+// profe aqui importo componentes especiales que next.js usa para armar el HTML básico
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
-// Este documento extiende la clase Document de Next.js para definir la estructura HTML base
+// aqui extienedo extiendo la clase Document de next.js para definir la estructura html base
 export default class MyDocument extends Document {
-  // getInitialProps permite recoger propiedades iniciales del documento
+  // en esta parte profe con getInitialProps permito recoger propiedades iniciales del documento
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
     return { ...initialProps };
   }
 
-  // Aquí definimos el render con el HTML raíz, head y body personalizados
+  // con esto aqui definino el render con el html raiz, head y body personalizados
   render() {
     return (
       <Html lang="es">
         <Head>
-          {/* Link a Google Fonts para usar Roboto Regular 400 */}
+          {/* aqui ya manejo el link a google fonts para usar Roboto Regular 400 */}
           <link
             href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
             rel="stylesheet"
           />
         </Head>
         <body>
-          {/* Main inyecta el contenido de la página */}
+          {/* aqui declaro el main que inyecta el contenido de la pagina */}
           <Main />
-          {/* NextScript inyecta los scripts necesarios de Next.js */}
+          {/*  y con NextScript inyecto los scripts necesarios de next.js */}
           <NextScript />
         </body>
       </Html>
