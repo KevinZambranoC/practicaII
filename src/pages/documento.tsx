@@ -15,9 +15,6 @@ export default class MyDocument extends Document {
       <Html lang="es">
         <Head>
  
-          {/* icono para el url */}
-          <link rel="icono" href="/logo.jpg" />
-
           {/* aqui ya manejo el link a google fonts para usar Roboto Regular 400 */}
           <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet"/>
         </Head>
