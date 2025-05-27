@@ -1,24 +1,32 @@
-// profe aqui importo componentes especiales que next.js usa para armar el HTML básico
-import { Html, Head, Main, NextScript } from 'next/document'
+// pages/_document.tsx
+import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 
-// aqui declaro mi componente Document el cual  es la base HTML de la app next.js, para personalizar el html, head y body
-export default function Document() {
-  return (
-    // aqui coloco la etiqueta html raiz y le ponemos el idioma español para que google y navegadores lo entiendan
-    <Html lang="es">
-      <Head>
-        {/* y aqui meto el link de gogle fonts para usar la fuente Roboto con peso 400 */}
-        <link
-          href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
-      <body>
-        {/* aqui el next mete el contenido principal de la pagina que estemos viendo */}
-        <Main />
-        {/*  y aqui el next mete los scripts que necesita para que todo funcione  */}
-        <NextScript />
-      </body>
-    </Html>
-  )
+// Este documento extiende la clase Document de Next.js para definir la estructura HTML base
+export default class MyDocument extends Document {
+  // getInitialProps permite recoger propiedades iniciales del documento
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps };
+  }
+
+  // Aquí definimos el render con el HTML raíz, head y body personalizados
+  render() {
+    return (
+      <Html lang="es">
+        <Head>
+          {/* Link a Google Fonts para usar Roboto Regular 400 */}
+          <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap"
+            rel="stylesheet"
+          />
+        </Head>
+        <body>
+          {/* Main inyecta el contenido de la página */}
+          <Main />
+          {/* NextScript inyecta los scripts necesarios de Next.js */}
+          <NextScript />
+        </body>
+      </Html>
+    );
+  }
 }
