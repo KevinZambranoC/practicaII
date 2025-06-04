@@ -4,7 +4,7 @@ import Navbar from '../components/Navbar';
 // profe aqui importo la lógica de mi codigo
 import { processLines } from '../logica/glifos';
 
-export default function VentanaCargar() {
+export default function VentanaResultados() {
   const router = useRouter();
 
   // aqui recibo el contenido codificado que viene por la URL 
