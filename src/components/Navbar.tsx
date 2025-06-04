@@ -6,7 +6,7 @@ export default function Navbar()
   // aqui yo realizo el contenedor del navbar el cual utilizare como componente y se lo voy a pasar a las demas ventanas tanto la principal
   // como la de carga y resultados
   return (
-    <nav className="w-full px-6 py-4 bg-white border-b border-black/20 shadow-lg shadow-black/50">
+    <nav className="w-full sticky top-0 z-20 px-6 py-4 bg-white border-b border-black/20 shadow-lg shadow-black/50 ">
         
         <div className="flex flex-col md:flex-row items-center justify-between max-w-screen-xl mx-auto">
           

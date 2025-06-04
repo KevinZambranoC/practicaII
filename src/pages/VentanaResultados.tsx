@@ -67,12 +67,12 @@ export default function VentanaResultados() {
           {/* aqui realice una tabla responsiva con scroll horizontal */}
           <div className="overflow-x-auto">
             
-            <table className="w-full table-auto text-left">
+            <table className="w-full table-fixed">
               
               <thead>
                 <tr>
-                  <th className="px-4 py-2 border-b border-gray-300">Decimal</th>
-                  <th className="px-4 py-2 border-b border-gray-300">Glifo / Mensaje</th>
+                  <th className="w-1/2 px-4 py-2 border-b border-gray-300 text-center text-black">Decimal</th>
+                  <th className="w-1/2 px-4 py-2 border-b border-gray-300 text-center text-black">Glifo / Mensaje</th>
                 </tr>
               </thead>
 
@@ -80,8 +80,8 @@ export default function VentanaResultados() {
                 {/* aqui itero cada linea para mostrar las dos columnas */}
                 {lines.map((line, idx) => (
                   <tr key={idx} className="hover:bg-gray-100">
-                    <td className="px-4 py-2 border-b border-gray-200 text-black">{line.decimal}</td>
-                    <td className="px-4 py-2 border-b border-gray-200 text-black">{line.glifo}</td>
+                    <td className="w-1/2 px-4 py-2 border-b border-gray-200 text-center text-black">{line.decimal}</td>
+                    <td className="w-1/2 px-4 py-2 border-b border-gray-200 text-center text-black">{line.glifo}</td>
                   </tr>
                 ))}
               </tbody>

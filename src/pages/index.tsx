@@ -31,12 +31,12 @@ export default function Home() {
         <div className="relative z-10 flex flex-col items-center justify-center min-h-full text-white px-4 py-10 space-y-6">
           
           {/* este es mi contenedor Paso 1 */}
-          <div className="w-full max-w-3xl bg-white bg-opacity-90 rounded-xl shadow-lg flex overflow-hidden text-black">
+          <div className="w-full max-w-3xl bg-white bg-opacity-90 rounded-xl shadow-lg flex overflow-hidden text-black flex-col sm:flex-row min-h-[360px] sm:min-h-48 md:min-h-56">
              {/*  se compone de una imagen que es igual para los otros 3 pero cambia la imagen en cada contenedor*/}
-            <img src="/imagen1.jpg" alt="paso 1" className="w-1/3 h-auto object-cover md:h-full"/>
+            <img src="/imagen1.jpg" alt="paso 1" className="w-full sm:w-1/3 h-40 sm:h-full object-cover"/>
             
             {/* y del espacio donde va un titulo y un parrafo de forma centrada */}
-            <div className="p-4 flex flex-col items-center justify-center">
+            <div className="p-4 flex flex-col items-center justify-center flex-1">
               
               <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-center">
                 PASO 1
@@ -52,11 +52,11 @@ export default function Home() {
           </div>
 
           {/* este es mi contenedor Paso 2 */}
-          <div className="w-full max-w-3xl bg-white bg-opacity-90 rounded-xl shadow-lg flex overflow-hidden text-black">
+          <div className="w-full max-w-3xl bg-white bg-opacity-90 rounded-xl shadow-lg flex overflow-hidden text-black flex-col sm:flex-row min-h-[360px] sm:min-h-48 md:min-h-56">
             
-            <img src="/imagen2.jpg" alt="paso 2" className="w-1/3 h-auto object-cover md:h-full"/>
+            <img src="/imagen2.jpg" alt="paso 2" className="w-full sm:w-1/3 h-40 sm:h-full object-cover"/>
             
-            <div className="p-4 flex flex-col items-center justify-center">
+            <div className="p-4 flex flex-col items-center justify-center flex-1">
               
               <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-center">
                 PASO 2
@@ -72,11 +72,11 @@ export default function Home() {
           </div>
 
           {/* este es mi contenedor Paso 3 */}
-          <div className="w-full max-w-3xl bg-white bg-opacity-90 rounded-xl shadow-lg flex overflow-hidden text-black">
+          <div className="w-full max-w-3xl bg-white bg-opacity-90 rounded-xl shadow-lg flex overflow-hidden text-black flex-col sm:flex-row min-h-[360px] sm:min-h-48 md:min-h-56">
             
-            <img src="/imagen3.jpg" alt="paso 3" className="w-1/3 h-auto object-cover md:h-full"/>
+            <img src="/imagen3.jpg" alt="paso 3" className="w-full sm:w-1/3 h-40 sm:h-full object-cover"/>
             
-            <div className="p-4 flex flex-col items-center justify-center">
+            <div className="p-4 flex flex-col items-center justify-center flex-1">
               
               <h2 className="text-2xl lg:text-3xl font-bold mb-3 text-center">
                 PASO 3
